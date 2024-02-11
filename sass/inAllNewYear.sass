@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Poppins:wght@300;400&display=swap')
+@import "./reset.css"
+@import "./mainBackForFilms.css"
+// Модальные окна
+@import "./modalWindow.css"
+//Анимация загрузки
+@import "./loadPageAnimation.css"
+//Стили для шапки
+@import "./styleForHeader"
+
+body
+    font-family: 'Montserrat', sans-serif
+    font-family: 'Noto Sans', sans-serif
+    font-family: 'Poppins', sans-serif
+    color: white
+    // Делаем главный задний фон
+    background-image: url('../img/Haizen.jpg')
+    background-size: cover //Обеспечивает, чтобы изображение занимало весь экран 
+    // background-position: center  //Выравнивание изображения по центру 
+    background-repeat: no-repeat //Запрет повторения изображения
+    
+    p
+        font-size: 16px
+
+    h1
+        font-size: 30px
+
+
+.container
+    max-width: 80%
+    padding: 0 15px
+
+    margin: 0 auto
+    // position: relative
+    // z-index: 1
+
+
+.main
+    margin-top: 15%
+    
+.aboutFilm
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    .poster
+        height: 450px
+        width: 300px
+
+
+    
+    .discription
+        flex-basis: 50%
+
+
+
+// .video-container
+//     position: absolute
+//     z-index: 2
+//     left: 5%
+//     bottom: 35%
+
+
+//Видео
+#video-container 
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 9998
+    background-color: black /* Черный фон, если видео не заполняет весь экран */
+    
+
+#video 
+    width: 100%
+    height: 100%
+
+
+#closeVideoBtn
+    background: white
+    margin-left: 95%
+    

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Poppins:wght@300;400&display=swap')
+@import "./reset.css"
+@import "./mainBackForFilms.css"
+// Модальные окна
+@import "./modalWindow.css"
+//Анимация загрузки
+@import "./loadPageAnimation.css"
+//Шапка
+@import "./styleForHeader.css"
+    
+    
+body
+    font-family: 'Montserrat', sans-serif
+    font-family: 'Noto Sans', sans-serif
+    font-family: 'Poppins', sans-serif
+    color: white
+    // Делаем главный задний фон
+    background-image: url('../img/backForPageAllFilms.jpg')
+    background-size: cover //Обеспечивает, чтобы изображение занимало весь экран 
+    //background-position: center  //Выравнивание изображения по центру 
+    //background-repeat: no-repeat //Запрет повторения изображения
+    
+    p
+        font-size: 16px
+
+    h1
+        font-size: 30px
+
+.container
+    max-width: 80%
+    padding: 0 15px
+
+    margin: 0 auto
+
+
+.main
+    margin-top: 10%
+
+
+.article
+    text-align: center
+    margin-bottom: 20px
+    
+    h1
+        font-size: 50px
+        font-weight: 500
+
+.films
+    display: flex
+    gap: 35px
+    justify-content: center
+    flex-wrap: wrap
+
+.card
+    cursor: pointer
+    transform: transform 0.5s
+
+    &:hover
+        transform: translateY(-10px)
+    
+    img
+        width: 280px
+        height: 330px
+    

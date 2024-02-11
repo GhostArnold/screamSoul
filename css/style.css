@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Poppins:wght@300;400&display=swap");
+@import url(./reset.css);
+@import url(./modalWindow.css);
+@import url(./mainButton.css);
+@import url(./loadPageAnimation.css);
+.header-nav {
+  padding-top: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 76px; }
+  .header-nav .logo {
+    color: white;
+    font-weight: 500;
+    font-size: 46px;
+    letter-spacing: 2px;
+    position: relative; }
+    .header-nav .logo::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      background-color: yellow;
+      bottom: 0;
+      left: 25%; }
+  .header-nav .nav-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-weight: 300;
+    font-size: 18px; }
+    .header-nav .nav-list .nav-item a {
+      color: white; }
+    .header-nav .nav-list .nav-item {
+      transition: transform 0.15s ease-in-out; }
+      .header-nav .nav-list .nav-item:hover {
+        transform: scale(1.3); }
+
+.sound_on {
+  display: none; }
+  .sound_on.activate_off {
+    display: block; }
+
+.sound_button {
+  display: inline-block;
+  transition: transform 0.3s ease; }
+
+/* Анимация изменения размера при наведении */
+.sound_button:hover {
+  transform: scale(1.1); }
+
+/* Стили для изображения */
+#soundImage {
+  transition: filter 0.3s ease; }
+
+/* Анимация изменения цвета при наведении */
+.sound_button:hover #soundImage {
+  filter: grayscale(50%); }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  color: white; }
+  body p {
+    font-size: 16px; }
+  body h1 {
+    font-size: 30px; }
+
+.walpapper {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+.intro {
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: url("../img/rezervSpace.jpg") center no-repeat;
+  background-size: cover; }
+  .intro::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); }
+
+.video {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 56.25%; }
+
+.video-media {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+.container {
+  max-width: 80%;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.theMostPopularFilms {
+  margin: 120px 0; }
+  .theMostPopularFilms .ourFilms {
+    display: flex;
+    /* Дочерние элементы выравниваются по центру по вертикали */
+    align-items: center;
+    min-height: 500px; }
+    .theMostPopularFilms .ourFilms .allFilms {
+      flex-basis: 80%;
+      margin-right: 45px; }
+      .theMostPopularFilms .ourFilms .allFilms h1 {
+        font-size: 70px; }
+  .theMostPopularFilms .bestFilms {
+    display: flex;
+    flex-wrap: wrap; }
+    .theMostPopularFilms .bestFilms .card {
+      width: 200px;
+      height: 230px;
+      display: inline-block;
+      padding: 15px 25px;
+      box-sizing: border-box;
+      cursor: pointer;
+      margin: 10px 15px;
+      background-position: center;
+      background-size: cover;
+      transform: transform 0.5s; }
+      .theMostPopularFilms .bestFilms .card:hover {
+        transform: translateY(-10px); }
+    .theMostPopularFilms .bestFilms .card img {
+      border-radius: 40px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,93 @@
+.modal
+    //Чтобы не скролилось вместе с body
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100vh
+    //Чтобы элемент находился выше остальных, у которых z-index меньше
+    z-index: 9998
+    //Чёрный и прозрачностm 30%
+    background-color: rgba(0, 0, 0, .3)
+
+    display: grid
+    //По вертикали
+    align-items: center
+    //По гороизонтали
+    justify-content: center
+    
+    //Чтобы по оси y слова автоматом начинали скролится, если не хватает места
+    overflow-y: auto
+
+    //Чтобы скрыть модальное окно (display: none - вызвало бы проблемы с анимацией)
+    visibility: hidden
+    //Не занимает место на веб-странице
+    opacity: 0  
+
+    //Анимация модального окна
+    transition: opacity 0.4s, visibility 0.4s
+
+
+    .modal.open &-box
+        transform: scale(1)
+    &-box
+        max-width: 500px
+        max-height: 700px  // Задаем максимальную высоту
+        overflow: auto  // Добавляем скролл, если контент больше
+        padding: 45px
+        z-index: 1
+        background-color: #fff
+        color: #111
+
+        //Чтобы блок стал системой координат
+        position: relative
+        //Отсупы, чтобы модальное окно не прилипало
+        margin: 30px 15px
+
+        //Тень для модального окна
+        box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.92)
+
+        //Анимация
+        transform: scale(0)
+        transition: transform .8s
+
+    
+
+        .close-btn-module
+            position: absolute
+            top: 8px
+            right: 25px
+            border: none
+            padding: 5px
+            width: 45px
+            height: 45px
+            
+            &:hover
+                transition: .4s
+                width: 47px
+                height: 47px
+
+        ul img     
+            width: 150px
+            height: 150px
+            margin: 15px auto
+            display: block
+            border: 1px solid black
+
+        ul p 
+            margin: 5px 0 
+            
+            
+
+        //Делаем так, чтобы ползунок не был виден
+        &::-webkit-scrollbar
+            width: 0  // Устанавливаем ширину ползунка в 0
+
+
+
+
+    //open - класс элемента modal
+    &.open
+        //Модальное окно будет видно
+        visibility: visible
+        opacity: 1

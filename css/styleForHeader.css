@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.header-nav {
+  padding-top: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 76px; }
+  .header-nav .logo {
+    color: white;
+    font-weight: 500;
+    font-size: 46px;
+    letter-spacing: 2px;
+    position: relative; }
+    .header-nav .logo::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      background-color: yellow;
+      bottom: 0;
+      left: 25%; }
+  .header-nav .nav-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-weight: 300;
+    font-size: 18px; }
+    .header-nav .nav-list .nav-item a {
+      color: white; }
+    .header-nav .nav-list .nav-item {
+      transition: transform 0.15s ease-in-out; }
+      .header-nav .nav-list .nav-item:hover {
+        transform: scale(1.3); }
+
+.sound_on {
+  display: none; }
+  .sound_on.activate_off {
+    display: block; }
+
+.sound_button {
+  display: inline-block;
+  transition: transform 0.3s ease; }
+
+/* Анимация изменения размера при наведении */
+.sound_button:hover {
+  transform: scale(1.1); }
+
+/* Стили для изображения */
+#soundImage {
+  transition: filter 0.3s ease; }
+
+/* Анимация изменения цвета при наведении */
+.sound_button:hover #soundImage {
+  filter: grayscale(50%); }
+
+/*# sourceMappingURL=styleForHeader.css.map */

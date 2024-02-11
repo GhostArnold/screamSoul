@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Poppins:wght@300;400&display=swap')
+
+@import "./reset.css"
+
+// Модальные окна
+@import "./modalWindow.css"
+
+//Кнопка для перехода в фильмотеку
+@import "./mainButton.css"
+
+//Анимация загрузки
+@import "./loadPageAnimation.css"
+
+//Стили для шапки
+@import "./styleForHeader"
+
+
+body
+    font-family: 'Montserrat', sans-serif
+    font-family: 'Noto Sans', sans-serif
+    font-family: 'Poppins', sans-serif
+    color: white
+    // Делаем главный задний фон
+    // background-image: url('/img/mainBack.jpg')
+    // background-size: cover //Обеспечивает, чтобы изображение занимало весь экран 
+    // background-position: center  //Выравнивание изображения по центру 
+    // background-repeat: no-repeat //Запрет повторения изображения
+    
+    p
+        font-size: 16px
+
+    h1
+        font-size: 30px
+
+
+// Видео на задний фон
+.walpapper
+    position: absolute
+    z-index: 3
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+.intro
+    //Делаем маскимально видимую высоту и то что не влезает - прячем
+    max-height: 100vh
+    overflow: hidden
+    position: relative
+
+    background: url("../img/rezervSpace.jpg") center no-repeat
+    background-size: cover
+
+
+    &::after
+        //Маска затемнения
+        content: ""
+        display: block
+
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 2
+
+        width: 100%
+        height: 100%
+        //Затемнение
+        background-color: rgba(0, 0, 0, .2)
+.video
+    // Сделали адаптивным
+    position: relative
+    z-index: 1
+    padding-bottom: 56.25%
+
+.video-media
+    position: absolute
+    height: auto
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+
+    
+.container
+    max-width: 80%
+    padding: 0 15px
+
+    margin: 0 auto
+
+
+//Главная часть
+.theMostPopularFilms
+    margin: 120px 0
+
+    .ourFilms
+        display: flex
+        /* Дочерние элементы выравниваются по центру по вертикали */
+        align-items: center
+        min-height: 500px
+        .allFilms
+            // Устанавливаем ширину 50% от родительского контейнера
+            flex-basis: 80%
+            margin-right: 45px
+
+            h1
+                font-size: 70px
+
+    .bestFilms
+        //Добавить сетку - добавил
+        display: flex
+        //Разрешение на перенос
+        flex-wrap: wrap
+        .card
+            width: 200px
+            height: 230px
+            display: inline-block
+            padding: 15px 25px
+            box-sizing: border-box
+            cursor: pointer
+            margin: 10px 15px
+            background-position: center
+            background-size: cover
+            transform: transform 0.5s
+            
+            &:hover
+                transform: translateY(-10px)
+        .card img
+            border-radius: 40px
+            
+
+
+
+
+
+
+
+    

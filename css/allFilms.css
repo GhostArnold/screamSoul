@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Poppins:wght@300;400&display=swap");
+@import url(./reset.css);
+@import url(./mainBackForFilms.css);
+@import url(./modalWindow.css);
+@import url(./loadPageAnimation.css);
+@import url(./styleForHeader.css);
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-image: url("../img/backForPageAllFilms.jpg");
+  background-size: cover; }
+  body p {
+    font-size: 16px; }
+  body h1 {
+    font-size: 30px; }
+
+.container {
+  max-width: 80%;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.main {
+  margin-top: 10%; }
+
+.article {
+  text-align: center;
+  margin-bottom: 20px; }
+  .article h1 {
+    font-size: 50px;
+    font-weight: 500; }
+
+.films {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.card {
+  cursor: pointer;
+  transform: transform 0.5s; }
+  .card:hover {
+    transform: translateY(-10px); }
+  .card img {
+    width: 280px;
+    height: 330px; }
+
+/*# sourceMappingURL=allFilms.css.map */
