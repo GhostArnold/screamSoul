@@ -1,1 +1,58 @@
+@media(max-width: 1105px){
+    /* Общий перенос */
+    .ourFilms{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Блок с фильмами */
+    .bestFilms{
+        flex-basis: 100%;
+        justify-content: center;
+    }
+    /* Центрируем кнопку */
+    .allFilms{
+        text-align: center;
+    }
+    /* Расширяем фон в высоту */
+    .intro{
+        min-height: 120vh;
+    }
+    
+}
 
+/*
+@media(max-width: 1000px){
+.hamburger{
+    display: block;
+}
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate((45deg));
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate((-45deg));
+}
+
+
+.nav-list{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3;
+}
+.nav-item{
+    margin: 16px 0;
+}
+.nav-menu.hamburger.active{
+    left: 0;
+}
+}
+*/
