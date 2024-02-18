@@ -1,58 +1,78 @@
-@media(max-width: 1105px){
-    /* Общий перенос */
+@media(max-width: 1000px){
+    .intro{
+        min-height: 135vh;
+    }
+}
+@media(max-width: 629px){
+    .intro{
+        min-height: 200vh;
+    }
+}
+
+@media(max-width: 450px){
+    .intro{
+        min-height: 240vh;
+    }
+}
+
+
+@media(max-width: 1100px){
     .ourFilms{
+        display: flex;
         flex-wrap: wrap;
-        align-items: center;
         justify-content: center;
     }
-    /* Блок с фильмами */
-    .bestFilms{
-        flex-basis: 100%;
-        justify-content: center;
-    }
-    /* Центрируем кнопку */
     .allFilms{
         text-align: center;
+        margin-bottom: 15px;
     }
-    /* Расширяем фон в высоту */
-    .intro{
-        min-height: 120vh;
+
+    .bestFilms{
+        flex-wrap: wrap;
+        flex-wrap: 40%;
+        justify-content: center;
+        
+    }
+}
+@media (max-width: 570px) {
+    .header-nav nav .logo {
+        font-size: 30px;    
     }
     
 }
+@media(max-width: 980px){
+    .openMenu{
+        cursor: pointer;
+        background: white;
+    }
+            
+    
+    nav .nav-list{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+    }
 
-/*
-@media(max-width: 1000px){
-.hamburger{
-    display: block;
-}
-.hamburger.active .bar:nth-child(2){
-    opacity: 0;
-}
-.hamburger.active .bar:nth-child(1){
-    transform: translateY(8px) rotate((45deg));
-}
-.hamburger.active .bar:nth-child(3){
-    transform: translateY(-8px) rotate((-45deg));
-}
+    nav .nav-list .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
 
+    }
 
-.nav-list{
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #262626;
-    width: 100%;
-    text-align: center;
-    transition: 0.3;
+    nav .openMenu{
+        display: block; 
+    }
+
 }
-.nav-item{
-    margin: 16px 0;
-}
-.nav-menu.hamburger.active{
-    left: 0;
-}
-}
-*/
+/*# sourceMappingURL=media.css.map */

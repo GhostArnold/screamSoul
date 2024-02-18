@@ -1,41 +1,101 @@
+
+    
+// .header-nav
+//     padding-top: 46px
+//     display: flex
+//     justify-content: space-between
+//     align-items: flex-end
+//     margin-bottom: 76px
+
+    // .logo
+    //     color: white
+    //     font-weight: 500
+    //     font-size: 46px
+    //     letter-spacing: 2px
+
+    //     position: relative
+
+        // &::after
+        //     content: ""
+        //     position: absolute
+        //     width: 50%
+        //     height: 2px
+        //     background-color: yellow
+        //     bottom: 0
+        //     left: 25%
+
+
+//     .nav-list
+//         display: flex
+//         justify-content: space-between
+//         gap: 30px
+//         font-weight: 300
+//         font-size: 18px
+//         .nav-item a
+//             color: white
+
+        // .nav-item
+        //     transition: transform 0.15s ease-in-out
+        //     &:hover
+        //         transform: scale(1.3)
+            
+
+//     .openMenu, .closeMenu
+//         cursor: pointer
+//         display: none
+
+
+
 .header-nav
     padding-top: 46px
-    display: flex
-    justify-content: space-between
-    align-items: flex-end
-    margin-bottom: 76px
 
-    .logo
-        color: white
-        font-weight: 500
-        font-size: 46px
-        letter-spacing: 2px
-
-        position: relative
-
-        &::after
-            content: ""
-            position: absolute
-            width: 50%
-            height: 2px
-            background-color: yellow
-            bottom: 0
-            left: 25%
-
-
-    .nav-list
+    nav
         display: flex
         justify-content: space-between
-        gap: 30px
-        font-weight: 300
-        font-size: 18px
-        .nav-item a
-            color: white
+        align-items: center
 
-        .nav-item
-            transition: transform 0.15s ease-in-out
-            &:hover
-                transform: scale(1.3)
+        .nav-list
+            display: flex
+            list-style: none
+
+            font-weight: 300
+            font-size: 17px
+            .nav-item
+                transition: transform 0.15s ease-in-out
+                &:hover
+                    transform: scale(1.3)
+
+        .nav-list li a
+            display: inline-block
+            padding: 15px
+            text-decoration: none
+            text-transform: uppercase
+            color: #fff
+        
+
+        .closeMenu
+            margin: 20px
+            display: none
+            cursor: pointer
+            background: white
+        .logo
+            color: white
+            font-weight: 500
+            font-size: 46px
+            letter-spacing: 2px
+
+            position: relative
+
+
+            &::after
+                content: ""
+                position: absolute
+                width: 50%
+                height: 2px
+                background-color: yellow
+                bottom: 0
+                left: 25%
+        
             
 
 //Музыка
