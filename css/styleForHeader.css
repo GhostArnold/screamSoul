@@ -9,7 +9,7 @@
       display: flex;
       list-style: none;
       font-weight: 300;
-      font-size: 17px; }
+      font-size: 15px; }
       .header-nav nav .nav-list .nav-item {
         transition: transform 0.15s ease-in-out; }
         .header-nav nav .nav-list .nav-item:hover {
@@ -19,7 +19,8 @@
       padding: 15px;
       text-decoration: none;
       text-transform: uppercase;
-      color: #fff; }
+      color: #fff;
+      height: 15px; }
     .header-nav nav .closeMenu {
       margin: 20px;
       display: none;
@@ -39,6 +40,12 @@
         background-color: yellow;
         bottom: 0;
         left: 25%; }
+
+.openMenu {
+  cursor: pointer;
+  background: white;
+  display: none;
+  margin: 20px; }
 
 .sound_on {
   display: none; }

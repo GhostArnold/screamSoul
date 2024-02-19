@@ -1,76 +1,49 @@
-document.getElementById("open-modal-link").addEventListener("click", function(){
-    document.getElementById("my-modal").classList.add("open");
+// Функция для открытия модального окна по его идентификатору
+function openModal(modalId) {
+    document.getElementById(modalId).classList.add("open");
+}
+
+// Функция для закрытия модального окна по его идентификатору
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove("open");
+}
+
+// Добавление обработчиков событий для открытия модальных окон
+document.getElementById("open-modal-link").addEventListener("click", function() {
+    openModal("my-modal");
+});
+document.getElementById("open-modal-link2").addEventListener("click", function() {
+    openModal("my-modal2");
+});
+document.getElementById("open-modal-link3").addEventListener("click", function() {
+    openModal("my-modal3");
 });
 
-document.getElementById("close-my-module-btn").addEventListener("click", function(){
-    document.getElementById("my-modal").classList.remove("open");
+// Добавление обработчиков событий для закрытия модальных окон
+document.getElementById("close-my-module-btn").addEventListener("click", function() {
+    closeModal("my-modal");
+});
+document.getElementById("close-my-module-btn2").addEventListener("click", function() {
+    closeModal("my-modal2");
+});
+document.getElementById("close-my-module-btn3").addEventListener("click", function() {
+    closeModal("my-modal3");
 });
 
-
-
-document.getElementById("open-modal-link2").addEventListener("click", function(){
-    document.getElementById("my-modal2").classList.add("open");
-});
-
-document.getElementById("close-my-module-btn2").addEventListener("click", function(){
-    document.getElementById("my-modal2").classList.remove("open");
-});
-
-
-
-document.getElementById("open-modal-link3").addEventListener("click", function(){
-    document.getElementById("my-modal3").classList.add("open");
-});
-
-document.getElementById("close-my-module-btn3").addEventListener("click", function(){
-    document.getElementById("my-modal3").classList.remove("open");
-});
-
-
-// Закрыть модальное окно при нажатии на Esc
-window.addEventListener('keydown', (e) => {
+// Закрытие модального окна при нажатии на клавишу Esc
+window.addEventListener('keydown', function(e) {
     if (e.key === "Escape") {
-        document.getElementById("my-modal2").classList.remove("open")
+        document.querySelectorAll('.modal.open').forEach(function(modal) {
+            modal.classList.remove('open');
+        });
     }
 });
 
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-        document.getElementById("my-modal").classList.remove("open")
-    }
-});
-
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-        document.getElementById("my-modal3").classList.remove("open")
-    }
-});
-
-
-// Закрыть модальное окно при клике вне его
-document.querySelector("#my-modal .modal-box").addEventListener('click', event => {
-    event._isClickWithInModal = true;
-});
-document.getElementById("my-modal").addEventListener('click', event => {
-    if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('open');
-});
-
-
-
-document.querySelector("#my-modal2 .modal-box").addEventListener('click', event => {
-    event._isClickWithInModal = true;
-});
-document.getElementById("my-modal2").addEventListener('click', event => {
-    if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('open');
-});
-
-
-document.querySelector("#my-modal3 .modal-box").addEventListener('click', event => {
-    event._isClickWithInModal = true;
-});
-document.getElementById("my-modal3").addEventListener('click', event => {
-    if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('open');
+// Закрытие модального окна при клике вне его
+document.querySelectorAll('.modal').forEach(function(modal) {
+    modal.addEventListener('click', function(event) {
+        if (!event.target.closest('.modal-box')) {
+            modal.classList.remove('open');
+        }
+    });
 });
